@@ -1,0 +1,66 @@
+Kafka Commands Used (Recent Session)
+
+---
+
+**1️⃣ Kafka Broker / Server**
+
+```
+bin\windows\kafka-server-start.bat config\server.properties
+```
+
+---
+
+**2️⃣ Topic Commands**
+
+* Create topic:
+
+```
+bin\windows\kafka-topics.bat --create --topic user-topic --bootstrap-server localhost:9092
+bin\windows\kafka-topics.bat --create --topic quickstart-events --bootstrap-server localhost:9092
+```
+
+* List topics (optional):
+
+```
+bin\windows\kafka-topics.bat --list --bootstrap-server localhost:9092
+```
+
+---
+
+**3️⃣ Producer Commands**
+
+```
+bin\windows\kafka-console-producer.bat --topic quickstart-events --bootstrap-server localhost:9092
+```
+
+* Example messages sent:
+
+```
+hello bro
+Hi
+How Are you
+Hello bhai
+kaise ho
+```
+
+---
+
+**4️⃣ Consumer Commands**
+
+```
+bin\windows\kafka-console-consumer.bat --topic user-topic --from-beginning --bootstrap-server localhost:9092
+bin\windows\kafka-console-consumer.bat --topic quickstart-events --from-beginning --bootstrap-server localhost:9092
+```
+
+* Example messages received:
+
+```
+hello bro
+Hi
+How Are you
+Hellow
+Hello bhai
+kaise ho
+good morning
+...
+```
