@@ -15,7 +15,9 @@ It consists of two microservices:
 - Spring Boot  
 - Apache Kafka  
 - Zookeeper (for Kafka broker)  
-- Maven  
+- Maven
+- kafka 2.8
+- zookeeper
 
 ---
 
